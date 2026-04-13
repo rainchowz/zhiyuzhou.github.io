@@ -21,6 +21,13 @@ redirect_from:
   color: var(--zz-text);
 }
 
+.zz-home .anchor {
+  display: block;
+  position: relative;
+  top: -84px;
+  visibility: hidden;
+}
+
 .zz-home a {
   color: var(--zz-blue-dark);
   text-decoration: none;
@@ -154,7 +161,7 @@ redirect_from:
 
 .zz-row {
   display: grid;
-  grid-template-columns: minmax(150px, 210px) 1fr;
+  grid-template-columns: minmax(180px, 240px) 1fr;
   gap: 1.25rem;
   padding: 1rem 0;
   border-bottom: 1px solid var(--zz-border);
@@ -189,20 +196,29 @@ redirect_from:
   color: var(--zz-muted);
 }
 
-.zz-education-left {
+.zz-education-left,
+.zz-experience-left {
   display: grid;
   grid-template-columns: 58px 1fr;
   gap: 0.75rem;
   align-items: center;
 }
 
-.zz-school-logo {
+.zz-school-logo,
+.zz-lab-logo {
   width: 58px;
   height: 58px;
   border-radius: 8px;
   object-fit: cover;
   border: 1px solid var(--zz-border);
   box-shadow: 0 4px 12px rgba(47, 111, 179, 0.10);
+}
+
+.zz-date-range {
+  display: inline-block;
+  margin-top: 0.18rem;
+  line-height: 1.35;
+  white-space: nowrap;
 }
 
 @media (max-width: 700px) {
@@ -219,6 +235,10 @@ redirect_from:
   .zz-section-title {
     font-size: 1.35rem;
   }
+
+  .zz-date-range {
+    white-space: normal;
+  }
 }
 </style>
 
@@ -230,7 +250,7 @@ redirect_from:
 
 <div class="zz-intro" markdown="1">
 
-I am **Zhiyu Zhou** (**周志宇** in Chinese), a senior undergraduate student in **Software Engineering** at **Jilin University**, advised by **Assoc. Prof. Hongxia Xie**.
+I am **Zhiyu Zhou** (**周志宇** in Chinese), a senior undergraduate student in **Software Engineering** at **Jilin University**, advised by [**Assoc. Prof. Hongxia Xie**](https://www.hongxiaxie.net/).
 
 My current research focuses on **multimodal large language models (MLLMs)**, **embodied AI**, and **computer vision**. I am particularly interested in the synergy among **perception**, **understanding**, and **action**, with the goal of building intelligent systems that can interact more naturally with the physical world and better align with human-like cognitive processes.
 
@@ -298,8 +318,8 @@ My current research focuses on **multimodal large language models (MLLMs)**, **e
       <img class="zz-school-logo" src="images/jilin-university.jpg" alt="Jilin University">
       <div>
         <strong>Jilin University</strong>
-        Sept. 2022 - Jun. 2026<br>
-        Expected
+        <span class="zz-date-range">Sept. 2022 - Jun. 2026</span><br>
+        <span>Expected</span>
       </div>
     </div>
     <div class="zz-row-right">
@@ -315,13 +335,16 @@ My current research focuses on **multimodal large language models (MLLMs)**, **e
 
 <div class="zz-two-col-list">
   <div class="zz-row">
-    <div class="zz-row-left">
-      <strong>Research Assistant</strong>
-      2025 - Present
+    <div class="zz-row-left zz-experience-left">
+      <img class="zz-lab-logo" src="images/avclab.png" alt="Affective Vision Computing Lab">
+      <div>
+        <strong>Research Assistant</strong>
+        <span class="zz-date-range">2025 - Present</span>
+      </div>
     </div>
     <div class="zz-row-right">
       <p class="zz-row-title">Affective Vision Computing (AVC) Lab, Jilin University</p>
-      <p class="zz-row-meta">Supervisor: Assoc. Prof. Hongxia Xie</p>
+      <p class="zz-row-meta">Supervisor: <a href="https://www.hongxiaxie.net/">Assoc. Prof. Hongxia Xie</a></p>
     </div>
   </div>
 </div>
@@ -334,7 +357,7 @@ My current research focuses on **multimodal large language models (MLLMs)**, **e
   <div class="zz-row">
     <div class="zz-row-left">
       <strong>Undergraduate Scholarship</strong>
-      2022 - 2025
+      <span class="zz-date-range">2022 - 2025</span>
     </div>
     <div class="zz-row-right">
       <p class="zz-row-title">Jilin University</p>
