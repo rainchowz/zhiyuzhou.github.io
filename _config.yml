@@ -1,7 +1,7 @@
 # Site Settings
 title                    : "Zhiyu Zhou"
 description              : "My current research focuses on multimodal large language models, embodied AI, and computer vision."
-repository               : "rainchowz/zhiyuzhou.github.io"
+repository               : "rainchowz/rainchowz.github.io"
 google_scholar_stats_use_cdn : true
 
 # Google Analytics
