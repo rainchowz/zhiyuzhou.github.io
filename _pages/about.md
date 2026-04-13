@@ -20,7 +20,7 @@ redirect_from:
   --zz-bg: #f8fbff;
 }
 
-/* Unified link polish */
+/* Sidebar polish */
 .author__name {
   color: var(--zz-blue-dark);
   font-weight: 800;
@@ -29,61 +29,24 @@ redirect_from:
 .author__urls a,
 .author__urls_sm a,
 .zz-home a {
-  position: relative;
-  display: inline-block;
   color: var(--zz-blue-dark);
-  text-decoration: none !important;
-  border-bottom: 0 !important;
-  box-shadow: none !important;
-  background-image: none !important;
+  text-decoration: none;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.author__urls a *,
-.author__urls_sm a *,
-.zz-home a * {
-  text-decoration: none !important;
-  border-bottom: 0 !important;
-  box-shadow: none !important;
-  background-image: none !important;
-}
-
-.author__urls a::after,
-.zz-home a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.14rem;
-  width: 100%;
-  height: 2px;
-  background: var(--zz-blue-line);
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 0.22s ease, background 0.22s ease;
-  pointer-events: none;
-}
-
 .author__urls a:hover,
+.author__urls_sm a:hover,
 .zz-home a:hover {
   color: var(--zz-blue);
+  text-decoration: none;
+}
+
+.author__urls a {
+  display: inline-block;
 }
 
 .author__urls a:hover {
   transform: translateX(3px);
-}
-
-.zz-home a:hover {
-  transform: translateY(-1px);
-}
-
-.author__urls a:hover::after,
-.zz-home a:hover::after {
-  transform: scaleX(1);
-  background: var(--zz-blue-line);
-}
-
-.author__urls_sm a::after {
-  display: none;
 }
 
 .author__urls li {
@@ -104,10 +67,6 @@ redirect_from:
   font-weight: 800;
 }
 
-.masthead a::after {
-  display: none !important;
-}
-
 .zz-home {
   color: var(--zz-text);
 }
@@ -117,6 +76,18 @@ redirect_from:
   position: relative;
   top: -84px;
   visibility: hidden;
+}
+
+.zz-intro a,
+.zz-paper-title a,
+.zz-row-right a {
+  display: inline-block;
+}
+
+.zz-intro a:hover,
+.zz-paper-title a:hover,
+.zz-row-right a:hover {
+  transform: translateY(-1px);
 }
 
 .zz-section-title {
