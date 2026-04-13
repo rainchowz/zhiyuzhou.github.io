@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 <style>
-.zz-home {
+:root {
   --zz-blue: #2f6fb3;
   --zz-blue-dark: #174f8a;
   --zz-blue-soft: #eaf4ff;
@@ -18,6 +18,58 @@ redirect_from:
   --zz-muted: #6b7f96;
   --zz-border: #dbe8f6;
   --zz-bg: #f8fbff;
+}
+
+/* Sidebar polish */
+.author__name {
+  color: var(--zz-blue-dark);
+  font-weight: 800;
+}
+
+.author__urls a,
+.author__urls_sm a {
+  position: relative;
+  color: var(--zz-blue-dark);
+  text-decoration: none;
+  border-bottom: 0;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.author__urls a {
+  display: inline-block;
+}
+
+.author__urls a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.16rem;
+  width: 100%;
+  height: 2px;
+  background: var(--zz-blue-line);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.22s ease;
+}
+
+.author__urls a:hover {
+  color: var(--zz-blue);
+  transform: translateX(3px);
+}
+
+.author__urls a:hover::after {
+  transform: scaleX(1);
+}
+
+.author__urls li {
+  transition: transform 0.2s ease;
+}
+
+.author__urls li:hover {
+  transform: translateX(2px);
+}
+
+.zz-home {
   color: var(--zz-text);
 }
 
@@ -32,11 +84,24 @@ redirect_from:
   color: var(--zz-blue-dark);
   text-decoration: none;
   border-bottom: 1px solid rgba(47, 111, 179, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .zz-home a:hover {
   color: var(--zz-blue);
   border-bottom-color: var(--zz-blue);
+}
+
+.zz-intro a,
+.zz-paper-title a,
+.zz-row-right a {
+  display: inline-block;
+}
+
+.zz-intro a:hover,
+.zz-paper-title a:hover,
+.zz-row-right a:hover {
+  transform: translateY(-1px);
 }
 
 .zz-section-title {
@@ -64,6 +129,12 @@ redirect_from:
   color: var(--zz-blue-dark);
   font-size: 1.05rem;
   line-height: 1;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.zz-section-title:hover .zz-icon {
+  transform: translateY(-2px) rotate(-3deg);
+  background: #dceeff;
 }
 
 .zz-intro {
@@ -82,8 +153,14 @@ redirect_from:
 }
 
 .zz-highlight {
+  display: inline-block;
   font-weight: 800;
   color: var(--zz-blue-dark);
+  transition: transform 0.2s ease;
+}
+
+.zz-highlight:hover {
+  transform: translateX(4px);
 }
 
 .zz-news {
@@ -93,6 +170,11 @@ redirect_from:
 
 .zz-news li {
   margin-bottom: 0.55rem;
+  transition: transform 0.2s ease;
+}
+
+.zz-news li:hover {
+  transform: translateX(4px);
 }
 
 .zz-date {
@@ -107,6 +189,11 @@ redirect_from:
   align-items: center;
   padding: 1.2rem 0;
   border-bottom: 1px solid var(--zz-border);
+  transition: transform 0.22s ease;
+}
+
+.zz-paper:hover {
+  transform: translateY(-2px);
 }
 
 .zz-paper-cover {
@@ -116,6 +203,35 @@ redirect_from:
   border: 1px solid var(--zz-border);
   background: var(--zz-bg);
   box-shadow: 0 8px 20px rgba(47, 111, 179, 0.10);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.zz-paper-cover::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -80%;
+  width: 45%;
+  height: 140%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.55),
+    rgba(255, 255, 255, 0)
+  );
+  transform: skewX(-18deg);
+  transition: left 0.65s ease;
+  pointer-events: none;
+}
+
+.zz-paper-cover:hover {
+  transform: translateY(-3px);
+  border-color: var(--zz-blue-line);
+  box-shadow: 0 12px 28px rgba(47, 111, 179, 0.18);
+}
+
+.zz-paper-cover:hover::after {
+  left: 130%;
 }
 
 .zz-paper-cover img {
@@ -134,6 +250,7 @@ redirect_from:
   color: #fff;
   font-size: 0.78rem;
   font-weight: 800;
+  z-index: 1;
 }
 
 .zz-paper-title {
@@ -166,6 +283,12 @@ redirect_from:
   padding: 1rem 0;
   border-bottom: 1px solid var(--zz-border);
   align-items: center;
+  transition: transform 0.22s ease, background 0.22s ease;
+}
+
+.zz-row:hover {
+  transform: translateX(4px);
+  background: linear-gradient(90deg, rgba(234, 244, 255, 0.45), rgba(255, 255, 255, 0));
 }
 
 .zz-row-left {
@@ -212,6 +335,13 @@ redirect_from:
   object-fit: cover;
   border: 1px solid var(--zz-border);
   box-shadow: 0 4px 12px rgba(47, 111, 179, 0.10);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.zz-row:hover .zz-school-logo,
+.zz-row:hover .zz-lab-logo {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(47, 111, 179, 0.16);
 }
 
 .zz-date-range {
@@ -250,7 +380,7 @@ redirect_from:
 
 <div class="zz-intro" markdown="1">
 
-I am **Zhiyu Zhou** (**周志宇** in Chinese), a senior undergraduate student in **Software Engineering** at **Jilin University**, advised by [**Assoc. Prof. Hongxia Xie**](https://www.hongxiaxie.net/).
+I am **Zhiyu Zhou** (**周志宇** in Chinese), a senior undergraduate student in **Software Engineering** at **Jilin University**, advised by <a href="https://www.hongxiaxie.net/" target="_blank" rel="noopener noreferrer"><strong>Assoc. Prof. Hongxia Xie</strong></a>.
 
 My current research focuses on **multimodal large language models (MLLMs)**, **embodied AI**, and **computer vision**. I am particularly interested in the synergy among **perception**, **understanding**, and **action**, with the goal of building intelligent systems that can interact more naturally with the physical world and better align with human-like cognitive processes.
 
@@ -279,7 +409,7 @@ My current research focuses on **multimodal large language models (MLLMs)**, **e
   </div>
   <div>
     <p class="zz-paper-title">
-      <a href="https://rainchowz.github.io/PinpointQA/">PinpointQA: A Dataset and Benchmark for Small Object-Centric Spatial Understanding in Indoor Videos</a>
+      <a href="https://rainchowz.github.io/PinpointQA/" target="_blank" rel="noopener noreferrer">PinpointQA: A Dataset and Benchmark for Small Object-Centric Spatial Understanding in Indoor Videos</a>
     </p>
     <p class="zz-paper-authors">
       <strong>Zhiyu Zhou</strong>, Peilin Liu, Ruoxuan Zhang, Luyang Zhang, Cheng Zhang, Hongxia Xie, Wen-Huang Cheng
@@ -297,7 +427,7 @@ My current research focuses on **multimodal large language models (MLLMs)**, **e
   </div>
   <div>
     <p class="zz-paper-title">
-      <a href="https://zhangdaxia22.github.io/MindPower/">MindPower: Enabling Theory-of-Mind Reasoning in VLM-based Embodied Agents</a>
+      <a href="https://zhangdaxia22.github.io/MindPower/" target="_blank" rel="noopener noreferrer">MindPower: Enabling Theory-of-Mind Reasoning in VLM-based Embodied Agents</a>
     </p>
     <p class="zz-paper-authors">
       Ruoxuan Zhang, Qiyun Zheng, <strong>Zhiyu Zhou</strong>, Ziqi Liao, Siyu Wu, Jian-Yu Jiang-Lin, Bin Wen, Hongxia Xie, Jianlong Fu, Wen-Huang Cheng
@@ -344,7 +474,7 @@ My current research focuses on **multimodal large language models (MLLMs)**, **e
     </div>
     <div class="zz-row-right">
       <p class="zz-row-title">Affective Vision Computing (AVC) Lab, Jilin University</p>
-      <p class="zz-row-meta">Supervisor: <a href="https://www.hongxiaxie.net/">Assoc. Prof. Hongxia Xie</a></p>
+      <p class="zz-row-meta">Supervisor: <a href="https://www.hongxiaxie.net/" target="_blank" rel="noopener noreferrer">Assoc. Prof. Hongxia Xie</a></p>
     </div>
   </div>
 </div>
