@@ -31,7 +31,7 @@ redirect_from:
   position: relative;
   color: var(--zz-blue-dark);
   text-decoration: none;
-  border-bottom: 0;
+  border-bottom: 0 !important;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
@@ -67,6 +67,16 @@ redirect_from:
 
 .author__urls li:hover {
   transform: translateX(2px);
+}
+
+/* Navigation active state */
+.masthead__menu-item a {
+  transition: color 0.2s ease;
+}
+
+.masthead__menu-item a.is-active {
+  color: var(--zz-blue-dark) !important;
+  font-weight: 800;
 }
 
 .zz-home {
@@ -453,7 +463,7 @@ My current research focuses on **multimodal large language models (MLLMs)**, **e
       </div>
     </div>
     <div class="zz-row-right">
-      <p class="zz-row-title">B.Sc. in Software Engineering</p>
+      <p class="zz-row-title">B.Eng. in Software Engineering</p>
       <p class="zz-row-meta">Senior undergraduate student, School of Software, Jilin University.</p>
     </div>
   </div>
