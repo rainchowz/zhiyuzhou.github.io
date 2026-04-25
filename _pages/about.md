@@ -366,7 +366,7 @@ redirect_from:
 
 <div class="zz-intro" markdown="1">
 
-I am **Zhiyu Zhou** (**周志宇** in Chinese), a senior undergraduate student in **Software Engineering** at **Jilin University**, advised by <a href="https://www.hongxiaxie.net/" target="_blank" rel="noopener noreferrer"><strong>Assoc. Prof. Hongxia Xie</strong></a>.
+I am **Zhiyu Zhou** (**周志宇** in Chinese), a senior undergraduate student in **Software Engineering** at **Jilin University**, advised by <a href="https://www.hongxiaxie.net/" target="_blank" rel="noopener noreferrer"><strong>Prof. Hongxia Xie</strong></a>.
 
 My current research focuses on **multimodal large language models (MLLMs)**, **embodied AI**, and **computer vision**. I am particularly interested in the synergy among **perception**, **understanding**, and **action**, with the goal of building intelligent systems that can interact more naturally with the physical world and better align with human-like cognitive processes.
 
@@ -460,7 +460,7 @@ My current research focuses on **multimodal large language models (MLLMs)**, **e
     </div>
     <div class="zz-row-right">
       <p class="zz-row-title">Affective Vision Computing (AVC) Lab, Jilin University</p>
-      <p class="zz-row-meta">Supervisor: <a href="https://www.hongxiaxie.net/" target="_blank" rel="noopener noreferrer">Assoc. Prof. Hongxia Xie</a></p>
+      <p class="zz-row-meta">Supervisor: <a href="https://www.hongxiaxie.net/" target="_blank" rel="noopener noreferrer">Prof. Hongxia Xie</a></p>
     </div>
   </div>
 </div>
